@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Crop Disease Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🌾 CropHealth</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/upload">Upload</a></li>
+                <li><a href="/history">History</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Smart Crop Disease Detection</h1>
+            <p>Detect crop diseases in seconds using AI/ML</p>
+            <a href="/upload" class="btn btn-primary">Start Now</a>
+        </div>
+    </div>
+
+    <section class="features">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>1. Upload Image</h3>
+                    <p>Upload a clear photo of the crop leaf</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>2. AI Detection</h3>
+                    <p>AI analyzes and identifies the disease</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>3. Get Results</h3>
+                    <p>View disease info and treatment options</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💊</div>
+                    <h3>4. Treatment Tips</h3>
+                    <p>Get pesticide and fertilizer recommendations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="supported-crops">
+        <div class="container">
+            <h2>Supported Crops</h2>
+            <div class="crops-list">
+                <div class="crop-item">🍅 Tomato</div>
+                <div class="crop-item">🥔 Potato</div>
+                <div class="crop-item">🌽 Corn</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Smart Crop Disease Detection System. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

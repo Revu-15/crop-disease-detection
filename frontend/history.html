@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload History - CropHealth</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🌾 CropHealth</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/upload">Upload</a></li>
+                <li><a href="/history">History</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container history-container">
+        <h1>Upload History</h1>
+
+        <div class="history-filters">
+            <input type="text" id="searchInput" placeholder="Search by disease name..." class="search-box">
+            <select id="sortSelect" class="sort-select">
+                <option value="recent">Most Recent</option>
+                <option value="oldest">Oldest</option>
+                <option value="confidence">Highest Confidence</option>
+            </select>
+        </div>
+
+        <div id="historyList" class="history-list"></div>
+        <div id="emptyMessage" class="empty-message" style="display:none;">
+            <p>No history yet. <a href="/upload">Upload your first image!</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Smart Crop Disease Detection System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/api.js') }}"></script>
+    <script>
+        async function loadHistory() {
+            const historyList = document.getElementById('historyList');
+            const emptyMessage = document.getElementById('emptyMessage');
+            
+            try {
+                const response = await fetch('/api/history');
+                const data = await response.json();
+                
+                if (data.data.length === 0) {
+                    emptyMessage.style.display = 'block';
+                    return;
+                }
+                
+                historyList.innerHTML = data.data.map(item => `
+                    <div class="history-item">
+                        <div class="history-image">
+                            <img src="${item.image_path}" alt="${item.disease_name}">
+                        </div>
+                        <div class="history-info">
+                            <h3>${item.disease_name}</h3>
+                            <p><strong>Confidence:</strong> ${(item.confidence * 100).toFixed(2)}%</p>
+                            <p><strong>Date:</strong> ${item.upload_time}</p>
+                        </div>
+                        <button class="btn btn-small" onclick="deleteHistory(${item.id})">Delete</button>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading history:', error);
+            }
+        }
+        
+        async function deleteHistory(id) {
+            if (!confirm('Delete this history item?')) return;
+            
+            try {
+                const response = await fetch(`/api/history/delete/${id}`, { method: 'DELETE' });
+                if (response.ok) {
+                    loadHistory();
+                }
+            } catch (error) {
+                console.error('Error deleting history:', error);
+            }
+        }
+        
+        loadHistory();
+    </script>
+</body>
+</html>
