@@ -1,0 +1,112 @@
+{
+  "Tomato Early Blight": {
+    "crop_type": "Tomato",
+    "description": "A fungal disease (Alternaria solani) affecting tomato leaves, causing leaf spots and lesions",
+    "symptoms": "Brown circular spots with concentric rings on lower leaves, yellow halo around lesions",
+    "prevention_tips": "Remove infected leaves promptly, improve air circulation, avoid overhead watering, use drip irrigation, mulch plants, rotate crops yearly",
+    "suggested_pesticide": "Chlorothalonil, Mancozeb, or Copper sulfate",
+    "treatment_duration": "7-14 days",
+    "severity": "Medium",
+    "recommended_fertilizer": "Potassium-rich fertilizer (Potash)",
+    "spray_schedule": "Every 7-10 days starting from early stages"
+  },
+  "Tomato Late Blight": {
+    "crop_type": "Tomato",
+    "description": "A serious fungal disease (Phytophthora infestans) occurring in cool, wet conditions",
+    "symptoms": "Water-soaked spots on leaves and stems, white mold on undersides, rapid spreading, fruit rot",
+    "prevention_tips": "Use resistant varieties, reduce humidity, ensure proper spacing, avoid wet foliage, remove infected plants immediately, fungicide application",
+    "suggested_pesticide": "Copper fungicide, Metalaxyl, or Mancozeb",
+    "treatment_duration": "10-21 days",
+    "severity": "High",
+    "recommended_fertilizer": "Calcium nitrate to strengthen plant tissue",
+    "spray_schedule": "Every 5-7 days in wet weather"
+  },
+  "Tomato Leaf Spot": {
+    "crop_type": "Tomato",
+    "description": "Bacterial disease (Xanthomonas) causing lesions on tomato leaves",
+    "symptoms": "Small dark brown or black spots on leaves with yellow halos, spots with watery appearance",
+    "prevention_tips": "Use disease-resistant seeds/varieties, avoid wet foliage, sanitize tools between plants, remove infected leaves, proper spacing",
+    "suggested_pesticide": "Copper-based bactericide, Streptomycin, or fixed copper",
+    "treatment_duration": "5-10 days",
+    "severity": "Low to Medium",
+    "recommended_fertilizer": "Balanced NPK (10-10-10) fertilizer",
+    "spray_schedule": "Every 7 days or after rainfall"
+  },
+  "Tomato Septoria Leaf Spot": {
+    "crop_type": "Tomato",
+    "description": "Fungal disease caused by Septoria lycopersici",
+    "symptoms": "Circular lesions with dark edges and gray centers, small black dots (pycnidia) in center, premature leaf drop",
+    "prevention_tips": "Remove lower infected leaves, improve air circulation, avoid overhead watering, stake plants, remove crop residue",
+    "suggested_pesticide": "Mancozeb, Chlorothalonil, or Bacillus subtilis",
+    "treatment_duration": "7-14 days",
+    "severity": "Medium",
+    "recommended_fertilizer": "Nitrogen-rich fertilizer for recovery",
+    "spray_schedule": "Every 7-10 days"
+  },
+  "Tomato Yellow Leaf Curl": {
+    "crop_type": "Tomato",
+    "description": "Viral disease transmitted by whiteflies",
+    "symptoms": "Yellowing of leaves, leaf curling, stunted growth, reduced fruit production",
+    "prevention_tips": "Control whitefly population, use reflective mulch, remove infected plants, plant resistant varieties, screen greenhouses",
+    "suggested_pesticide": "Insecticide for whitefly control (Neem oil, Pyrethrin)",
+    "treatment_duration": "14-21 days (management)",
+    "severity": "High",
+    "recommended_fertilizer": "High potassium fertilizer to boost immunity",
+    "spray_schedule": "Weekly or as needed for pest control"
+  },
+  "Potato Early Blight": {
+    "crop_type": "Potato",
+    "description": "Fungal disease caused by Alternaria solani affecting potato foliage",
+    "symptoms": "Brown circular spots with concentric rings on lower leaves, yellowing around spots, rapid spread during warm season",
+    "prevention_tips": "Remove infected foliage, good drainage, crop rotation (2-3 years), avoid overhead watering, mulching, use resistant varieties",
+    "suggested_pesticide": "Chlorothalonil, Mancozeb, or Copper-based fungicide",
+    "treatment_duration": "7-14 days",
+    "severity": "Medium",
+    "recommended_fertilizer": "Potassium-rich fertilizer",
+    "spray_schedule": "Every 7-10 days starting early season"
+  },
+  "Potato Late Blight": {
+    "crop_type": "Potato",
+    "description": "Most destructive potato disease in cool, wet weather caused by Phytophthora infestans",
+    "symptoms": "Water-soaked spots spreading rapidly, white mold on leaf undersides, stem rot, tuber decay",
+    "prevention_tips": "Use resistant varieties, destroy infected plants, proper ventilation, avoid wet foliage, crop rotation, remove plant debris",
+    "suggested_pesticide": "Metalaxyl-M, Cymoxanil, or Mancozeb+Cymoxanil combination",
+    "treatment_duration": "14-21 days",
+    "severity": "High",
+    "recommended_fertilizer": "Calcium nitrate",
+    "spray_schedule": "Every 5-7 days in wet conditions"
+  },
+  "Corn Common Rust": {
+    "crop_type": "Corn",
+    "description": "Fungal rust disease of corn causing pustules on leaves",
+    "symptoms": "Reddish-brown pustules on upper and lower leaf surfaces, severe damage in late season",
+    "prevention_tips": "Use resistant hybrids, adequate spacing, remove crop debris, avoid stress, timely irrigation",
+    "suggested_pesticide": "Azoxystrobin, Propiconazole, or Tebuconazole",
+    "treatment_duration": "7-10 days",
+    "severity": "Low to Medium",
+    "recommended_fertilizer": "Nitrogen-rich fertilizer for vigor",
+    "spray_schedule": "Every 7-14 days if needed"
+  },
+  "Corn Gray Leaf Spot": {
+    "crop_type": "Corn",
+    "description": "Fungal disease caused by Cercospora zeae-maydis",
+    "symptoms": "Long narrow lesions on leaves, gray-brown color, lesions merge causing large dead areas",
+    "prevention_tips": "Use resistant hybrids, crop rotation, remove crop residue, adequate spacing, avoid excess nitrogen",
+    "suggested_pesticide": "Azoxystrobin, Propiconazole, or Trifloxystrobin",
+    "treatment_duration": "7-10 days",
+    "severity": "Medium",
+    "recommended_fertilizer": "Balanced NPK fertilizer",
+    "spray_schedule": "As needed during growing season"
+  },
+  "Healthy Leaf": {
+    "crop_type": "General",
+    "description": "No disease detected - the leaf is healthy and disease-free",
+    "symptoms": "None - leaf appears healthy with normal color and texture",
+    "prevention_tips": "Continue regular monitoring and maintenance, proper watering, adequate sunlight, balanced fertilization",
+    "suggested_pesticide": "No treatment needed",
+    "treatment_duration": "N/A",
+    "severity": "None",
+    "recommended_fertilizer": "Standard maintenance fertilizer schedule",
+    "spray_schedule": "Regular preventive sprays every 14-21 days (optional)"
+  }
+}
