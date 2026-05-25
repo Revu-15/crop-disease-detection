@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Leaf Image - CropHealth</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🌾 CropHealth</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/upload">Upload</a></li>
+                <li><a href="/history">History</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container upload-container">
+        <h1>Upload Crop Leaf Image</h1>
+        
+        <div class="upload-section">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">📸</div>
+                <h2>Drop your image here</h2>
+                <p>or</p>
+                <input type="file" id="imageInput" accept="image/*" style="display:none">
+                <button class="btn btn-primary" onclick="document.getElementById('imageInput').click()">Choose File</button>
+                <p class="upload-hint">Supported formats: JPG, PNG, GIF (Max 16MB)</p>
+            </div>
+
+            <div class="preview-section" id="previewSection" style="display:none;">
+                <div class="preview-grid">
+                    <div class="preview-image">
+                        <img id="previewImg" src="" alt="Preview">
+                    </div>
+                    <div class="preview-info">
+                        <h3>Image Preview</h3>
+                        <p id="fileName"></p>
+                        <button class="btn btn-primary" id="analyzeBtn">Analyze Image</button>
+                        <button class="btn btn-secondary" onclick="resetUpload()">Change Image</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading" id="loading" style="display:none;">
+            <div class="spinner"></div>
+            <p>Analyzing image... Please wait</p>
+        </div>
+
+        <div class="error" id="error" style="display:none;"></div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Smart Crop Disease Detection System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/api.js') }}"></script>
+</body>
+</html>
